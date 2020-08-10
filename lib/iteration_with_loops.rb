@@ -1,6 +1,15 @@
 def find_even_values(src)
-  # Given an Array of Arrays of Integers ( [ [10, 11], [99, 50, 3, 4], [23, 41] ] ):
-  #
-  # Output all even values in each nested array
-
+  
+  chickens = 0 
+  
+  while chickens < src.count do
+    eggs = 0 
+    while eggs < src[chickens].count do
+      if src[chickens][eggs].even?
+        p src[chickens][eggs]
+      end
+      eggs += 1 
+    end
+    chickens += 1
+  end
 end
